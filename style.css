@@ -65,6 +65,7 @@ a:hover:not(.Spotlight ul a) {
 
 /* Logo */
 .Logo {
+    display: block;
     position: relative;
     top: 1rem;
     right: 1rem;
@@ -207,6 +208,9 @@ a:hover:not(.Spotlight ul a) {
         left: -89px; */
         z-index: 0;
         opacity: 0.25;
+
+        /* CHANGE MABE */
+        display: none;
     }
 
     #logo-white .cls-3 {

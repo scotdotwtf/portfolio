@@ -183,7 +183,7 @@ if (window.innerWidth >= 775) {
     img.style.transform = `translate(0px, ${y}px) rotate(${angle}deg)`;
   });
 
-  dvdBounce();
+  // dvdBounce();
 }
 
 /* Another lazy fix */
@@ -193,10 +193,12 @@ addEventListener("resize", (event) => {
     hasClipped = true;
   }
   
+  /*
   if (window.innerWidth <= 775 && hasDvd == false) {
     dvdBounce();
     hasDvd = true;
   } else if (window.innerWidth >= 775) {
     hasDvd = false;
   }
+  */
 });
