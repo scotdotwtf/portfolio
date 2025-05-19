@@ -7,18 +7,18 @@ html {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    color: black;
-    text-decoration: none;
 }
 
 body {
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     background: white;
+    color: black;
 }
 
 a:not(.Spotlight ul a) {
     font-weight: 600;
     font-size: 1.15rem;
+    color: black;
     text-decoration: solid underline #002FA7 4px;
     text-decoration-skip-ink: none;
     text-decoration-color: #002FA7;
@@ -108,8 +108,10 @@ a:hover:not(.Spotlight ul a) {
     white-space: nowrap;
 }
 
-.Spotlight ul {
+.Spotlight ul a {
+    color: black;
     list-style: none;
+    text-decoration: none;
 }
 
 .Spotlight li {
