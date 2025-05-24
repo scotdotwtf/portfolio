@@ -1,264 +1,74 @@
-/* Root */
-html {
-    -webkit-font-smoothing: antialiased;
+:root {
+    /* varaibles */
+    --accent: #002FA7dd;
+    --text: #000000dd;
+    --background: hsla(0, 0%, 100%, 0.867);
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+    font-family: Favorit;
+    src: url('ABCFavorit-Regular-Trial.woff2');
 }
 
-body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-    background: white;
-    color: black;
-}
+@layer base {
+    *,
+    *::before,
+    *::after {
 
-a:not(.Spotlight ul a) {
-    font-weight: 600;
-    font-size: 1.15rem;
-    color: black;
-    text-decoration: solid underline #002FA7 4px;
-    text-decoration-skip-ink: none;
-    text-decoration-color: #002FA7;
-    text-decoration-thickness: 4px;
-    text-underline-offset: 2px;
-    transition: text-decoration 300ms ease;
-    z-index: 7;
-}
-
-a:hover:not(.Spotlight ul a) {
-    text-decoration: solid underline #002FA7 20px;
-    text-underline-offset: -14px;
-    text-decoration-thickness: 20px;
-    color: white;
-    z-index: 7;
-}
-
-/* Layout */
-.Container {
-    display: grid;
-    grid-template-areas: 
-        "header header"
-        "spotlight content";
-    grid-template-columns: 50% 50%;
-    grid-template-rows: auto 1fr;
-    height: 100vh;
-    overflow: visible;
-    position: relative;
-}
-
-/* Header */
-.Header {
-    position: sticky;
-    top: 0;
-    grid-area: header;
-    display: flex;
-    gap: 1rem;
-    padding: 1rem;
-    font-size: 1rem;
-    position: sticky;
-    z-index: 5;
-    overflow-y: visible;
-}
-
-/* Logo */
-.Logo {
-    display: block;
-    position: relative;
-    top: 1rem;
-    right: 1rem;
-    font-size: 6rem;
-    z-index: 6;
-    width: 28rem;
-    height: 1px;
-}
-
-.Logo svg {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: auto;
-  z-index: 2;
-}
-
-#logo-black .cls-3 {
-  stroke: black;
-  transition: stroke 0.3s ease;
-}
-
-#logo-white .cls-3 {
-  stroke: white;
-  transition: stroke 0.3s ease;
-}
-
-/* Spotlight */
-.Spotlight {
-    position: fixed;
-    bottom: 0;
-    align-self: end;
-    grid-area: spotlight;
-    display: flex;
-    align-items: flex-end;
-    padding: 1rem;
-    height: 100%;
-    overflow: visible;
-    white-space: nowrap;
-}
-
-.Spotlight ul a {
-    color: black;
-    list-style: none;
-    text-decoration: none;
-}
-
-.Spotlight li {
-    font-size: 5.5vi;
-    font-weight: bold;
-    color: black;
-    margin-bottom: -10px;
-    z-index: 5;
-}
-
-.Spotlight li a:hover {
-    mix-blend-mode: normal;
-    color: #002FA7;
-    cursor: pointer;
-}
-
-/* Content */
-.Content {
-    grid-area: content;
-    display: flex;
-    height: 100%;
-    overflow: visible;
-    flex-direction: column;
-    gap: 5rem;
-}
-
-.Images {
-    width: 100%;
-    max-height: 50vh;
-    overflow: visible;
-    display: flex;
-    flex-direction: row-reverse;
-    gap: 0;
-    align-items: center;
-    padding-top: 1rem;
-    padding-right: 1rem;
-    cursor: pointer;
-}
-
-.Images img {
-    transition: transform 0.4s ease;
-    max-width: 20vw;
-    object-fit: contain;
-    flex-shrink: 0;
-    scroll-snap-align: end;
-    margin-left: -3vw;
-}
-
-.Images img:hover {
-    transform: scale(1.05) !important;
-    z-index: 1;
-}
-
-/* Footnotes */
-.Description {
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-    overflow-y: auto;
-    padding-bottom: 20px;
-    gap: 0.5rem;
-}
-
-.Description h1 {
-    font-size: 2rem;
-}
-
-.Description p {
-    font-size: 1.25rem;
-}
-
-.Description a {
-    padding-top: 1rem;
-}
-
-/* Mobile */
-@media (max-aspect-ratio: 3/4), (max-width: 775px) {
-    .Header {
-        z-index: 1;
+        box-sizing: border-box;
     }
 
-    .DvdWrapper {
-        position: absolute;
-        height: 450px;
-        width: 130px;
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
-    .Logo {
-        position: absolute;
-        top: 0;
-        left: 130px;
-        /* position: fixed; */
-        rotate: 90deg;
-        transform-origin: left;
-        /* top: 225px; 
-        left: -89px; */
-        z-index: 0;
-        opacity: 0.25;
-
-        /* CHANGE MABE */
-        display: none;
+    body {
+        color: var(--text);
+        background: var(--background);
+        font-size: 14pt;
+        font-family: Favorit, Helvetica, Arial, sans-serif;
     }
 
-    #logo-white .cls-3 {
-        display: none;
+    a:not(.bubble) {
+        color: var(--accent);
     }
 
-    .Container {
-        grid-template-areas: 
-        "header header"
-        "content";
+    .bubble {
+        padding: 0 6px 0 6px;
     }
+}
 
-    .Spotlight {
-        display: none;
-    }
+.highlight a {
+    color: var(--text);
+}
 
-    .Content {
-        gap: 1rem;
-        width: 100vw;
-        grid-column: 1;
-    }
+.logo {
+    max-height: 25vh;
+}
 
-    .Images {
-        overflow-x: auto;
-        height: 35vh;
-        scroll-snap-type: x proximity;
-        -webkit-overflow-scrolling: touch;
-        scrollbar-width: none;
-        gap: 1rem;
-    }
-    
-    .Images::-webkit-scrollbar {
-        display: none;
-    }
+#menu div:not(:first-child, :last-child) {
+    box-shadow: 0 1px 0 #00000015;
+}
 
-    .Images img {
-        max-width: 25vh;
-        scroll-snap-align: start;
-    }
+#download-menu {
+    transition: all 300ms ease;
+}
 
-    .Description {
-        padding-left: 5vw;
-        padding-right: 5vw;
-    }
+#social-menu {
+    transition: all 300ms ease;
+}
 
-    .Description p {
-        font-size: 1.18rem;
-    }
+a:hover {
+    animation: tilt-shaking 300ms infinite;
+}
+
+/* ty https://unused-css.com/blog/css-shake-animation/ */
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
 }
