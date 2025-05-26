@@ -7,7 +7,7 @@
 
 @font-face {
     font-family: Favorit;
-    src: url('ABCFavorit-Regular-Trial.woff2');
+    src: url('res/ABCFavorit-Regular-Trial.woff2');
 }
 
 @layer base {
@@ -28,16 +28,20 @@
         color: var(--text);
         background: var(--background);
         font-size: 14pt;
-        font-family: Favorit, Helvetica, Arial, sans-serif;
     }
 
     a:not(.bubble) {
         color: var(--accent);
+        text-decoration: none;
     }
 
     .bubble {
         padding: 0 6px 0 6px;
     }
+}
+
+body {
+    font-family: Favorit, Helvetica, Arial, sans-serif;
 }
 
 .highlight a {

@@ -45,7 +45,7 @@ function bindMenu(path, domain) {
 
             trigger.onclick = () => {
                 if (window.location.hash != `#${path}`) {
-                    window.location.hash = path;
+                    history.pushState(null, '', `#${path}`);
                 }
                 open()
             };
