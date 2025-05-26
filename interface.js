@@ -2,7 +2,6 @@
 function truncate() {
     if (window.innerWidth <= 775) {
         document.getElementById('photography').textContent = '/photo';
-        hasDvd = true;
     } else if (window.innerWidth >= 775) {
         document.getElementById('photography').textContent = '/photography';
     }

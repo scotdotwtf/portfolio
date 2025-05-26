@@ -1,13 +1,18 @@
+/* varaibles */
 :root {
-    /* varaibles */
     --accent: #002FA7dd;
     --text: #000000dd;
     --background: #ffffff;
 }
 
+/* base */
 @font-face {
     font-family: Favorit;
     src: url('res/ABCFavorit-Regular-Trial.woff2');
+}
+
+body {
+    font-family: Favorit, Helvetica, Arial, sans-serif;
 }
 
 @layer base {
@@ -34,28 +39,32 @@
         color: var(--accent);
         text-decoration: none;
     }
-
-    .bubble {
-        padding: 0 6px 0 6px;
-    }
 }
 
-body {
-    font-family: Favorit, Helvetica, Arial, sans-serif;
+/* layout */
+.content {
+    height: 100svh;
 }
 
+.menu {
+    overflow: scroll;
+    max-height: calc(100svh - 1px); /* blame ANDROID >:( */
+}
+
+.bubble {
+    padding: 0 6px 0 6px;
+}
+
+/* colors */
 .highlight a {
     color: var(--text);
 }
 
-.logo {
-    max-height: 25vh;
-}
-
-.content .item:not(:last-of-type) {
+.content .item:not(:last-of-type) { /* not doing ts in tailwind LOL */
     box-shadow: 0 1px 0 #00000015;
 }
 
+/* effects */
 a:hover {
     animation: tilt-shaking 300ms infinite;
 }
