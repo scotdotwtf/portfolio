@@ -1,17 +1,17 @@
 <!DOCTYPE html>
 <html>
-  <head>
+<head>
     <!-- metatags -->
     <title>SCOT.WTF</title>
     <meta name="theme-color" content="#ffffff">
-    <meta content="#002FA7" data-react-helmet="true" name="theme-color"/>
-    <meta name="title" content="SCOT.WTF"/>
-    <meta name="description" content="The works of SCOT."/>
-    <meta property="og:type" content="website"/>
-    <meta property="og:url" content="https://scot.wtf/"/>
-    <meta property="og:title" content="SCOT.WTF"/>
-    <meta property="og:description" content="The works of SCOT."/>
-    <meta property="og:image" content="card.jpg"/>
+    <meta content="#002FA7" data-react-helmet="true" name="theme-color" />
+    <meta name="title" content="SCOT.WTF" />
+    <meta name="description" content="The works of SCOT." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scot.wtf/" />
+    <meta property="og:title" content="SCOT.WTF" />
+    <meta property="og:description" content="The works of SCOT." />
+    <meta property="og:image" content="card.jpg" />
 
     <!-- data -->
     <meta charset="utf-8">
@@ -21,20 +21,22 @@
 
     <!-- external -->
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  </head>
-  <body>
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+<body class="overflow-hidden">
     <!-- page -->
-    <div id="content" class="flex flex-col h-[calc(var(--vh,1vh)*100)] m-1">
+    <div id="content" class="flex flex-col h-[calc(calc(var(--vh,1vh)*100)-2px)] m-1">
         <div class="flex gap-1">
             <a href="placeholder.html">/about</a>
             <a id="photography" href="placeholder.html">/photography</a>
             <a href="https://blog.scot.wtf">/blog</a>
             <div class="grow"></div>
             <button id="socials" class="bubble bg-lime-100 text-black rounded-full" href="#">@</button>
-            <button id="downloadables" class="bubble bg-blue-100 text-(--accent) rounded-full" href="#">downloadables</button>
+            <button id="downloadables" class="bubble bg-blue-100 text-(--accent) rounded-full"
+                href="#">downloadables</button>
         </div>
 
-        <!-- TODO: GRID STUFF -->
+        <!-- TODO: GRID STUFF WITH CMS OR RE USE MUSTACHE CODE -->
         <div class="highlight grow">
             <div>
                 <img src="">
@@ -51,15 +53,17 @@
                 <a>MAX</a>
             </div>
 
-                        <div>
-            <img src="">
+            <div>
+                <img src="">
                 <a>Gee Cee</a>
             </div>
-            
+
         </div>
 
-        <svg class="logo stroke-(--accent)" viewBox="-4 -4 515 150" overflow="visible">
-            <path class="cls-3" d="M285.534 77.792c-.132-.419-.204-.865-.204-1.328 0-2.428 1.968-4.396 4.396-4.396s4.396 1.968 4.396 4.396-1.968 4.396-4.396 4.396c-1.965 0-3.629-1.289-4.192-3.068M488.508.5c9.986 0 18.081 8.095 18.081 18.081V54.744c0 9.985-8.095 18.08-18.08 18.08H470.411m-36.144 36.121v22.606c0 7.488-6.071 13.558-13.559 13.558H375.515c-7.489 0-13.559-6.07-13.559-13.558V72.8m108.455-0H446.314c-6.654 0-12.048 5.394-12.048 12.048v24.097M291.871 145.099c-13.991 0-27.096-3.819-38.357-10.493M285.33 76.464c0 18.951-7.594 36.117-19.906 48.536-12.293 12.419-29.266 20.11-48.044 20.11m.005 0c-39.937 0-72.295-32.378-72.295-72.295M72.795 145.11C32.858 145.11.5 112.732.5 72.815M72.833 65V18.602C72.833 8.615 64.737.519 54.75.519H18.583C8.596.519.5 8.615.5 18.602V36.686M217.385 72.8c0-19.957 8.079-38.015 21.177-51.093C251.64 8.629 269.698.53 289.675.53M361.97 72.815c0 19.963-8.101 38.046-21.183 51.128-12.602 12.602-29.825 20.582-48.916 21.151M289.7.52c19.957 0 38.015 8.079 51.093 21.177C353.871 34.775 361.97 52.833 361.97 72.81M145.088.52c19.954 0 38.029 8.078 51.105 21.174C209.269 34.77 217.347 52.826 217.347 72.8c0-1.035.022-2.065.065-3.089M73.016 65.058c1.842-16.845 9.44-31.938 20.793-43.291C106.93 8.626 125.067.52 145.09.52M.5 72.8V36.67M145.09 72.815c0 19.958-8.1 38.037-21.179 51.116-13.079 13.08-31.157 21.179-51.116 21.179M489 .5H361.976V.52h-54.21c-2.527 0-15.662 0-18.066 0" stroke-width="2" fill="none"/>
+        <svg class="max-h-[25vh] stroke-(--accent)" viewBox="-4 -4 515 150" overflow="visible">
+            <path class="cls-3"
+                d="M285.534 77.792c-.132-.419-.204-.865-.204-1.328 0-2.428 1.968-4.396 4.396-4.396s4.396 1.968 4.396 4.396-1.968 4.396-4.396 4.396c-1.965 0-3.629-1.289-4.192-3.068M488.508.5c9.986 0 18.081 8.095 18.081 18.081V54.744c0 9.985-8.095 18.08-18.08 18.08H470.411m-36.144 36.121v22.606c0 7.488-6.071 13.558-13.559 13.558H375.515c-7.489 0-13.559-6.07-13.559-13.558V72.8m108.455-0H446.314c-6.654 0-12.048 5.394-12.048 12.048v24.097M291.871 145.099c-13.991 0-27.096-3.819-38.357-10.493M285.33 76.464c0 18.951-7.594 36.117-19.906 48.536-12.293 12.419-29.266 20.11-48.044 20.11m.005 0c-39.937 0-72.295-32.378-72.295-72.295M72.795 145.11C32.858 145.11.5 112.732.5 72.815M72.833 65V18.602C72.833 8.615 64.737.519 54.75.519H18.583C8.596.519.5 8.615.5 18.602V36.686M217.385 72.8c0-19.957 8.079-38.015 21.177-51.093C251.64 8.629 269.698.53 289.675.53M361.97 72.815c0 19.963-8.101 38.046-21.183 51.128-12.602 12.602-29.825 20.582-48.916 21.151M289.7.52c19.957 0 38.015 8.079 51.093 21.177C353.871 34.775 361.97 52.833 361.97 72.81M145.088.52c19.954 0 38.029 8.078 51.105 21.174C209.269 34.77 217.347 52.826 217.347 72.8c0-1.035.022-2.065.065-3.089M73.016 65.058c1.842-16.845 9.44-31.938 20.793-43.291C106.93 8.626 125.067.52 145.09.52M.5 72.8V36.67M145.09 72.815c0 19.958-8.1 38.037-21.179 51.116-13.079 13.08-31.157 21.179-51.116 21.179M489 .5H361.976V.52h-54.21c-2.527 0-15.662 0-18.066 0"
+                stroke-width="2" fill="none" />
         </svg>
 
         <div class="flex flex-wrap justify-between">
@@ -68,54 +72,32 @@
         </div>
     </div>
 
-    <!-- download menu (TEMP SETUP, WILL CMS LATER) -->
-    <div id="download-menu" class="-translate-y-full fixed w-screen flex flex-col z-10 top-0 rounded-b-4xl bg-blue-100 p-1 max-h-svh overflow-scroll">
-        <div class="controls flex justify-between ">
-            <p>share.scot.wtf</p>
-            <button id="d-close" class="bubble bg-white rounded-full">close</button>
-        </div>
-        
-        <div class="sticky flex flex-col p-6">
-            <h1 id="menu-label" class="text-4xl text-(--accent) -ml-[1px]">XCX World Concept</h1>
-            <div class="flex flex-row justify-between pl-[1px]">
-                <p class="text-gray-500/75">67mb -> 384mb</p>
-                <a class="underline decoration-2 underline-offset-1" href="download">download</a>
+    <!-- menu template -->
+    <script id="menu-template" type="x-tmpl-mustache">
+        <div id="{{id}}"
+            class="menu -translate-y-full fixed w-screen flex flex-col z-10 top-0 rounded-b-4xl p-1 max-h-svh overflow-scroll transition-all duration-300 ease-in-out" style="background: {{bgcolor}};">
+            <div class="controls flex justify-between ">
+                <p class="title">{{title}}</p>
+                <button class="close bubble bg-white rounded-full">close</button>
             </div>
-        </div>
-        <div class="sticky flex flex-col p-6">
-            <h1 id="menu-label" class="text-4xl text-(--accent) -ml-[1px]">Pop 2 Remake</h1>
-            <div class="flex flex-row justify-between pl-[1px]">
-                <p class="text-gray-500/75">~142mb</p>
-                <a class="underline decoration-2 underline-offset-1" href="download">download</a>
-            </div>
-        </div>
-        <div class="sticky flex flex-col p-6">
-            <h1 id="menu-label" class="text-4xl text-(--accent) -ml-[1px]">Example</h1>
-            <div class="flex flex-row justify-between pl-[1px]">
-                <p id="menu-label-left" class="text-gray-500/75">Example</p>
-                <a id="menu-label-right" class="underline decoration-2 underline-offset-1" href="download">download</a>
-            </div>
-        </div>
-    </div>
 
-    <!-- social menu (TEMP SETUP, WILL CMS LATER) -->
-    <div id="social-menu" class="-translate-y-full fixed w-screen flex flex-col z-10 top-0 rounded-b-4xl bg-lime-100 p-1 max-h-svh overflow-scroll">
-        <div class="controls flex justify-between ">
-            <p>socials.scot.wtf</p>
-            <button id="s-close" class="bubble bg-white rounded-full">close</button>
-        </div>
-        
-        <div class="sticky flex flex-col p-6">
-            <h1 id="menu-label" class="text-4xl text-black -ml-[1px]">Example</h1>
-            <div class="flex flex-row justify-between pl-[1px]">
-                <p id="menu-label-left" class="text-gray-500/75">Example</p>
-                <a id="menu-label-right" class="text-black underline decoration-2 underline-offset-1" href="download">download</a>
+            <div class="content">
+                {{#items}}
+                <div class="item flex flex-col p-6">
+                    <h1 class="item-title text-4xl -ml-[1px]" style="color: {{color}}">{{title}}</h1>
+                    <div class="flex flex-row justify-between pl-[1px]">
+                    <p class="item-alt text-gray-500/75">{{alt}}</p>
+                    <a class="item-link underline decoration-2 underline-offset-1" href="{{href}}" style="color: {{color}}">{{link}}</a>
+                    </div>
+                </div>
+                {{/items}}
             </div>
         </div>
-    </div>
+    </script>
 
     <!-- external -->
     <script src="interface.js"></script>
-  </body>
-</html>
 
+    <!-- menus will populate here -->
+</body>
+</html>
