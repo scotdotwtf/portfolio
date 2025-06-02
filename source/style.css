@@ -1,0 +1,78 @@
+/* imports */
+@import 'tailwindcss';
+
+/* varaibles */
+:root {
+    --accent: #002FA7dd;
+    --text: #000000dd;
+    --background: #ffffff;
+}
+
+/* base */
+@font-face {
+    font-family: Favorit;
+    src: url('/assets/ABCFavorit-Regular-Trial.woff2');
+}
+
+body {
+    font-family: Favorit, Helvetica, Arial, sans-serif;
+}
+
+@layer base {
+    *,
+    *::before,
+    *::after {
+
+        box-sizing: border-box;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        color: var(--text);
+        background: var(--background);
+        font-size: 14pt;
+    }
+
+    a:not(.bubble) {
+        color: var(--accent);
+        text-decoration: none;
+    }
+}
+
+/* layout */
+.content {
+    height: 100svh;
+}
+
+.menu {
+    overflow: scroll;
+    max-height: calc(100svh - 1px); /* blame ANDROID >:( */
+}
+
+.bubble {
+    padding: 0 6px 0 6px;
+}
+
+/* colors */
+.content .item:not(:last-of-type) { /* not doing ts in tailwind LOL */
+    box-shadow: 0 1px 0 #00000015;
+}
+
+/* effects */
+a:hover {
+    animation: tilt-shaking 300ms infinite;
+}
+
+/* ty https://unused-css.com/blog/css-shake-animation/ */
+@keyframes tilt-shaking {
+  0% { transform: rotate(0deg); }
+  25% { transform: rotate(5deg); }
+  50% { transform: rotate(0eg); }
+  75% { transform: rotate(-5deg); }
+  100% { transform: rotate(0deg); }
+}

@@ -1,0 +1,32 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "the works of SCOT.",
+  "main": "index.js",
+  "scripts": {
+    "build": "npx eleventy",
+    "serve": "npx eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/scotdotwtf/portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/scotdotwtf/portfolio/issues"
+  },
+  "homepage": "https://github.com/scotdotwtf/portfolio#readme",
+  "type": "module",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.0",
+    "@tailwindcss/postcss": "^4.1.8",
+    "cssnano": "^7.0.7",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.8"
+  },
+  "dependencies": {
+    "@11ty/eleventy-img": "^6.0.4"
+  }
+}

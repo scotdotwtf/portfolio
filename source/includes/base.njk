@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <!-- metatags -->
+    <title>{{ title }}</title>
+    <meta name="theme-color" content="#ffffff">
+    <meta content="#002FA7" data-react-helmet="true" name="theme-color" />
+    <meta name="title" content="SCOT.WTF" />
+    <meta name="description" content="the works of SCOT." />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://scot.wtf/" />
+    <meta property="og:title" content="SCOT.WTF" />
+    <meta property="og:description" content="he works of SCOT."" />
+    <meta property="og:image" content="card.jpg" />
+
+    <!-- data -->
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- external -->
+    <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
+</head>
+
+<body class="overflow-hidden">
+    <div class="content flex flex-col m-1">
+    {% include 'components/nav.njk' %}
+    {{ content | safe }}
+    {% include 'components/footer.njk' %}
+    </div>
+    
+    <!-- using 2 templating frameworks at once LOL -->
+    {% include "components/menu.njk" %}
+
+    <script src="/interface.js"></script>
+</body>
+</html>

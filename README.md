@@ -1,4 +1,14 @@
 ![sample SVG image](./res/scot.svg)
 # portfolio
 ### https://scot.wtf/
-this is my portfolio. it's static html css and js although im using mustache js to make template menus with items and loading json to do that. check out https://scot.wtf/#socials and https://scot.wtf/#downloadables to see how i did that, or just visit the website and click on the green @ or 'downloadables' at the top. i did use tailwind's cdn for css although i will be looking for alternative ways to use tailwind in github pages.
+this is my portfolio. it's written in nunjucks for 11ty along with some other funnies like using mustache.js for templating so i could pull from external sources. i also used tailwind because it ginuenly made it so much easier to write css. while it's not perfect, it's a pretty okay template and attempt at making an artistic portfolio while keeping it static. this project is free to use, share, and modify! :>
+
+also yes i know i'm using 2 templating frameworks at once. there was a reason. 💀
+
+## systems
+- 11ty (templating)
+- mustache.js (menus)
+- tailwindcss
+
+## credits
+- Carlo van Wyk, tailwind in 11ty setup guide https://www.humankode.com/eleventy/how-to-set-up-tailwind-4-with-eleventy-3/

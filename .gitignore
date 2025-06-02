@@ -1,0 +1,12 @@
+# npm
+node_modules/
+
+# build
+public/
+
+# other
+.env
+.log
+
+# macos
+.DS_Store
