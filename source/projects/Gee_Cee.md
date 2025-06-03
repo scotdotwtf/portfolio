@@ -1,9 +1,9 @@
 ---
 title: Gee Cee
 alt: A collection of works for the group "Gee Cee".
-worked: 2024-05-22 -> now
+date: 2024-05-22
 tags: ['post', 'UI', 'remakes']
-image: '/assets/projects/GCH_LSG.avif'
+images: ['/assets/projects/GCH_LSG.avif']
 accent: '#81439a'
 special: 'eleventy:ignore'
 ---

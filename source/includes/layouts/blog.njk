@@ -1,0 +1,35 @@
+---
+layout: 'base.njk'
+---
+
+<!-- TODO:
+head:
+  - '<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>'
+  - '<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">'
+---
+
+    <div class="glide">
+        <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+                    {% for image in images %}
+                        <img class="-z-10" alt='{{ title }}' src='{{ image }}'>
+                    {% endfor %}
+                </li>
+            </ul>
+        </div>
+    </div>
+
+-->
+
+<div class="flex-col highlight grow overflow-y-scroll rounded-lg mt-1">
+    <div class="images flex flex-row overflow-scroll w-parent pb-10">
+        {% for image in images %}
+            <img class="-z-10" style="width: 35vw; height: auto;" alt='{{ title }}' src='{{ image }}'>
+        {% endfor %}
+    </div>
+    
+    <h1 class="text-8xl sm:text-9xl">{{ title }}</h1>
+    <h2 class="text-5xl pl-1 sm:pl-2">{{ alt }}</h2>
+
+    <div class="mx-2 sm:mx-3">{{ content | safe }}</div>
+</div>
