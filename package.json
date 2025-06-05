@@ -27,7 +27,6 @@
     "tailwindcss": "^4.1.8"
   },
   "dependencies": {
-    "@11ty/eleventy-img": "^6.0.4",
-    "@glidejs/glide": "^3.7.1"
+    "@11ty/eleventy-img": "^6.0.4"
   }
 }

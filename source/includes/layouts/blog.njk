@@ -2,30 +2,26 @@
 layout: 'base.njk'
 ---
 
-<!-- TODO:
-head:
-  - '<script src="node_modules/@glidejs/glide/dist/glide.min.js"></script>'
-  - '<link rel="stylesheet" href="node_modules/@glidejs/glide/dist/css/glide.core.min.css">'
----
+<style>
+.preview {
+    transition: transform 0.4s ease;
+    max-width: 50vw;
+    object-fit: contain;
+    z-index: -1;
+}
 
-    <div class="glide">
-        <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-                    {% for image in images %}
-                        <img class="-z-10" alt='{{ title }}' src='{{ image }}'>
-                    {% endfor %}
-                </li>
-            </ul>
-        </div>
-    </div>
-
--->
+.preview:hover {
+    transform: scale(1.05) !important;
+    z-index: 1;
+}
+</style>
 
 <div class="flex-col highlight grow overflow-y-scroll rounded-lg mt-1">
-    <div class="images flex flex-row overflow-scroll w-parent pb-10">
-        {% for image in images %}
-            <img class="-z-10" style="width: 35vw; height: auto;" alt='{{ title }}' src='{{ image }}'>
-        {% endfor %}
+    <!-- FIX: OVERFLOW-Y-VISIBLE NOT WORKING WIHT OVERFLOW-X -->
+    <div class="w-parent max-h-[65vh] flex flex-row align-middle items-center overflow-x-scroll overflow-y-visible snap-end -gap-10">
+            {% for image in images %}
+                <img class="preview shrink-0 rounded-lg object-contain cursor-pointer" alt='{{ title }}' src='{{ image }}' data-index="{{ loop.index }}">
+            {% endfor %}
     </div>
     
     <h1 class="text-8xl sm:text-9xl">{{ title }}</h1>
@@ -33,3 +29,12 @@ head:
 
     <div class="mx-2 sm:mx-3">{{ content | safe }}</div>
 </div>
+
+<script>
+  document.querySelectorAll('.preview').forEach(img => {
+    /*const x = Math.random() * 50;*/
+    const y = Math.random() * 25;
+    const angle = (Math.random() * 10) - 5;
+    img.style.transform = `translate(0px, ${y}px) rotate(${angle}deg)`;
+  });
+</script>

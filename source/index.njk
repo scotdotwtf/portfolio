@@ -3,37 +3,19 @@ title: 'SCOT.WTF'
 layout: 'base.njk'
 ---
 
-<!--
-<style>
-    a ~ p {
-        height: 0;
-        opacity: 0;
-        transition: height 0.3 ease;
-    }
-
-    a:hover ~ p {
-        height: auto;
-        opacity: 1;
-        transition: all 0.3 ease;
-    }
-</style>
--->
-
 <div class="highlçight grow overflow-y-scroll rounded-lg mt-1">
     <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 grow w-parent">
         {% for post in collections.post.reverse() %}
-            <div class="mb-1 w-full rounded-lg break-inside-avoid ">
+            <div class="relative container mb-1 w-full rounded-lg break-inside-avoid overflow-clip">
                 <!-- todo: later load small img before <div class="blur-load" style="background-image: url(); background-size: cover;
                 background-position: center;"></div> -->
-                <a href="{{ post.url }}"><img class="rounded-lg relative" {{ post.data.special }} loading="lazy" alt="{{ post.data.alt }}" src="{{ post.data.images[0] }}"></a>
-                <p>{{ post.data.title }}</p>
+                <img class="rounded-lg relative" {{ post.data.special }} loading="lazy" alt="{{ post.data.alt }}" src="{{ post.data.images[0] }}">
+                <a href="{{ post.data.url or post.url }}"><div class="absolute w-full h-full bg-black/35 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col-reverse bottom-0 gap-2 py-2 px-3">
+                    <p class="text-2xl">{{ post.data.title }}</p>
+                    <p class="text-sm">{{ post.data.alt }}</p>
+                </div></a>
             </div>
         {% endfor %}
-
-        <div class="mb-1 w-full rounded-lg break-inside-avoid">
-            <a href="/about"><img class="rounded-lg" alt="more" src="assets/cat.webp"></a>
-            <p>More</p>
-        </div>
     </div>
     <svg class="max-h-[25vh] w-parent stroke-(--accent) my-5" viewBox="-4 -4 515 150" overflow="visible">
             <path
