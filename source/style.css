@@ -64,7 +64,7 @@ body {
 }
 
 /* effects */
-a:hover {
+a:hover:not(.no-wiggle) {
     animation: tilt-shaking 300ms infinite;
 }
 

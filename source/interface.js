@@ -65,3 +65,6 @@ function bindMenu(path, domain) {
 
 bindMenu('downloadables', 'share.scot.wtf')
 bindMenu('socials', 'socials.scot.wtf')
+
+// quickfix
+window.scrollTo(0, 0);

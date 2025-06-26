@@ -3,38 +3,43 @@ layout: 'base.njk'
 ---
 
 <style>
-.preview {
-    transition: transform 0.4s ease;
-    max-width: 50vw;
-    object-fit: contain;
-    z-index: -1;
-}
+    .jumpdown {
+        display: none;
+    }
 
-.preview:hover {
-    transform: scale(1.05) !important;
-    z-index: 1;
-}
+    @media (max-aspect-ratio: 3/4) {
+        .jumpdown {
+            display: inline;
+        }
+    }
 </style>
 
-<div class="flex-col highlight grow overflow-y-scroll rounded-lg mt-1">
+<div class="flex-col highlight grow overflow-y-scroll rounded-[13px] mt-1">
+    <!-- TODO: MAKE IMAGES STACK LIKE CARDS AND SWIPE (IMESSAGE) -->
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 grow w-parent">
+        {% for image in images %}
+            <div class="relative container mb-1 w-full rounded-lg break-inside-avoid overflow-clip">
+                <!-- todo: later load small img before <div class="blur-load" style="background-image: url(); background-size: cover;
+                background-position: center;"></div> -->
+                <img class="rounded-lg relative" {{ special }} loading="lazy" alt="{{ title }}" src="{{ image }}">
+            </div>
+        {% endfor %}
+    </div>
+
+    <a class="jumpdown no-wiggle sticky bottom-0 left-full bubble bg-blue-100 rounded-full cursor-pointer text-right w-parent py-5">-> See article</a>
+
     <!-- FIX: OVERFLOW-Y-VISIBLE NOT WORKING WIHT OVERFLOW-X -->
     <div class="w-parent max-h-[65vh] flex flex-row align-middle items-center overflow-x-scroll overflow-y-visible snap-end -gap-10">
-            {% for image in images %}
-                <img class="preview shrink-0 rounded-lg object-contain cursor-pointer" alt='{{ title }}' src='{{ image }}' data-index="{{ loop.index }}">
-            {% endfor %}
     </div>
     
-    <h1 class="text-8xl sm:text-9xl">{{ title }}</h1>
+    <h1 class="title text-8xl sm:text-9xl">{{ title }}</h1>
     <h2 class="text-5xl pl-1 sm:pl-2">{{ alt }}</h2>
 
     <div class="mx-2 sm:mx-3">{{ content | safe }}</div>
 </div>
 
 <script>
-  document.querySelectorAll('.preview').forEach(img => {
-    /*const x = Math.random() * 50;*/
-    const y = Math.random() * 25;
-    const angle = (Math.random() * 10) - 5;
-    img.style.transform = `translate(0px, ${y}px) rotate(${angle}deg)`;
-  });
+    document.querySelector('.jumpdown').onclick = () => {
+        document.querySelector('.title').scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'start' });
+    };
 </script>

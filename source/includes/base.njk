@@ -11,7 +11,7 @@
     <meta property="og:url" content="https://scot.wtf/" />
     <meta property="og:title" content="SCOT.WTF" />
     <meta property="og:description" content="he works of SCOT."" />
-    <meta property="og:image" content="card.jpg" />
+    <meta property="og:image" content="/assets/cat.webp" />
 
     <!-- data -->
     <meta charset="utf-8">
@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/style.css">
 
     <!-- external -->
+    <link rel="preload" href="/assets/ABCFavoritEdu-Regular.woff2" as="font"type="font/woff2" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/mustache@4.2.0/mustache.min.js"></script>
     {{ head | default([]) | join('\n') | safe }}
 </head>

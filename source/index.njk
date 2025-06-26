@@ -10,7 +10,7 @@ layout: 'base.njk'
                 <!-- todo: later load small img before <div class="blur-load" style="background-image: url(); background-size: cover;
                 background-position: center;"></div> -->
                 <img class="rounded-lg relative" {{ post.data.special }} loading="lazy" alt="{{ post.data.alt }}" src="{{ post.data.images[0] }}">
-                <a href="{{ post.data.url or post.url }}"><div class="absolute w-full h-full bg-black/35 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col-reverse bottom-0 gap-2 py-2 px-3">
+                <a href="{{ post.data.url or post.url }}"><div class="absolute w-full h-full bg-black/35 text-white opacity-0 hover:opacity-100 transition-opacity duration-300 flex flex-col-reverse bottom-0 gap-1 py-2 px-3">
                     <p class="text-2xl">{{ post.data.title }}</p>
                     <p class="text-sm">{{ post.data.alt }}</p>
                 </div></a>
