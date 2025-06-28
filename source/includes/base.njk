@@ -26,10 +26,12 @@
 </head>
 
 <body class="overflow-hidden">
+    <div class="theme-color h-25 w-full -top-20 z-0 left-0 fixed" style="background: white;"></div>
+
     <div class="content flex flex-col m-1">
-    {% include 'components/nav.njk' %}
-    {{ content | safe }}
-    {% include 'components/footer.njk' %}
+        {% include 'components/nav.njk' %}
+        {{ content | safe }}
+        {% include 'components/footer.njk' %}
     </div>
     
     <!-- using 2 templating frameworks at once LOL -->

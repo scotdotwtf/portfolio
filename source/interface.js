@@ -1,6 +1,6 @@
 // mobile & custom class sizing
 function runDefualts() {
-    document.getElementById('photography').textContent = window.innerWidth <= 775 ? '/photo' : '/photography';
+    document.getElementById('photography').textContent = window.innerWidth <= 450 ? '/photo' : '/photography';
     document.getElementById('downloadables').textContent = window.innerWidth <= 360 ? '↓' : 'downloadables';
 
     Array.from(document.querySelectorAll('.w-parent')).forEach(item => {

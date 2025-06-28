@@ -2,9 +2,12 @@
 <script id="menu-template" type="x-tmpl-mustache">
     <div id="{{ id }}"
         class="menu -translate-y-full fixed w-screen flex flex-col z-10 top-0 rounded-b-4xl p-1 transition-all duration-300 ease-in-out" style="background: {{bgcolor}};">
-        <div class="controls flex justify-between ">
-            <p class="title">{{ title }}</p>
-            <button class="close bubble bg-white rounded-full">close</button>
+        
+        <div class="theme-color h-25 w-full -top-20 z-0 left-0 fixed" style="background: {{bgcolor}};"></div>
+        
+        <div class="controls flex justify-between">
+            <p class="title z-1">{{ title }}</p>
+            <button class="close bubble bg-white rounded-full z-1">close</button>
         </div>
 
         {{ #items }}

@@ -3,20 +3,28 @@ layout: 'base.njk'
 ---
 
 <style>
-    .jumpdown {
-        display: none;
+    @media (min-width: 766px) {
+        .jumpdown {
+            display: none;
+        }
+
+        .article {
+            max-width: 850px;
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
-    @media (max-aspect-ratio: 3/4) {
+    @media (max-width: 766px) {
         .jumpdown {
             display: inline;
         }
     }
 </style>
 
-<div class="flex-col highlight grow overflow-y-scroll rounded-[13px] mt-1">
+<div class="article flex-col highlight grow overflow-y-scroll rounded-[13px] mt-1">
     <!-- TODO: MAKE IMAGES STACK LIKE CARDS AND SWIPE (IMESSAGE) -->
-    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 grow w-parent">
+    <div class="columns-1 sm:columns-2 md:columns-3 lg:columns-4 xl:columns-5 gap-1 grow w-parent overflow-scroll">
         {% for image in images %}
             <div class="relative container mb-1 w-full rounded-lg break-inside-avoid overflow-clip">
                 <!-- todo: later load small img before <div class="blur-load" style="background-image: url(); background-size: cover;
@@ -27,15 +35,35 @@ layout: 'base.njk'
     </div>
 
     <a class="jumpdown no-wiggle sticky bottom-0 left-full bubble bg-blue-100 rounded-full cursor-pointer text-right w-parent py-5">-> See article</a>
-
-    <!-- FIX: OVERFLOW-Y-VISIBLE NOT WORKING WIHT OVERFLOW-X -->
-    <div class="w-parent max-h-[65vh] flex flex-row align-middle items-center overflow-x-scroll overflow-y-visible snap-end -gap-10">
-    </div>
     
-    <h1 class="title text-8xl sm:text-9xl">{{ title }}</h1>
+    <h1 class="title text-7xl sm:text-9xl">{{ title }}</h1>
     <h2 class="text-5xl pl-1 sm:pl-2">{{ alt }}</h2>
 
     <div class="mx-2 sm:mx-3">{{ content | safe }}</div>
+
+    <br>
+    <div class="flex"> <!-- idk why but this fixes the thing not shaking 😭 -->
+        <a href="/index.html"><- SCOT.WTF</a>
+    </div>
+    <svg class="max-h-[25vh] w-parent stroke-(--accent) my-5" viewBox="-4 -4 515 150" overflow="visible">
+            <path
+                class="cls-3"
+                d="M285.534 77.792c-.132-.419-.204-.865-.204-1.328 0-2.428 1.968-4.396 4.396-4.396s4.396 1.968 4.396 4.396-1.968
+                    4.396-4.396 4.396c-1.965 0-3.629-1.289-4.192-3.068M488.508.5c9.986 0 18.081 8.095 18.081 18.081V54.744c0 9.985-8.095
+                    18.08-18.08 18.08H470.411m-36.144 36.121v22.606c0 7.488-6.071 13.558-13.559 13.558H375.515c-7.489
+                    0-13.559-6.07-13.559-13.558V72.8m108.455-0H446.314c-6.654 0-12.048 5.394-12.048 12.048v24.097M291.871 145.099c-13.991
+                    0-27.096-3.819-38.357-10.493M285.33 76.464c0 18.951-7.594 36.117-19.906 48.536-12.293 12.419-29.266 20.11-48.044
+                    20.11m.005 0c-39.937 0-72.295-32.378-72.295-72.295M72.795 145.11C32.858 145.11.5 112.732.5 72.815M72.833 65V18.602C72.833
+                    8.615 64.737.519 54.75.519H18.583C8.596.519.5 8.615.5 18.602V36.686M217.385 72.8c0-19.957 8.079-38.015
+                    21.177-51.093C251.64 8.629 269.698.53 289.675.53M361.97 72.815c0 19.963-8.101 38.046-21.183 51.128-12.602 12.602-29.825
+                    20.582-48.916 21.151M289.7.52c19.957 0 38.015 8.079 51.093 21.177C353.871 34.775 361.97 52.833 361.97
+                    72.81M145.088.52c19.954 0 38.029 8.078 51.105 21.174C209.269 34.77 217.347 52.826 217.347
+                    72.8c0-1.035.022-2.065.065-3.089M73.016 65.058c1.842-16.845 9.44-31.938 20.793-43.291C106.93 8.626 125.067.52
+                    145.09.52M.5 72.8V36.67M145.09 72.815c0 19.958-8.1 38.037-21.179 51.116-13.079 13.08-31.157 21.179-51.116 21.179M489
+                    .5H361.976V.52h-54.21c-2.527 0-15.662 0-18.066 0"
+                stroke-width="2"
+                fill="none"/>
+    </svg>
 </div>
 
 <script>
