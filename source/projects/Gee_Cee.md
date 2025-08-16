@@ -19,11 +19,11 @@ special: 'eleventy:ignore'
 
 # Story
 
-While this is less of a project and more of an entire collection of projects, I think it still deserves to be up here haha. All of these projects were done for my friends who have made a little group that we call the "GEE CEE." It's not like we're actually getting payed for anything we do, nor is any of this official- it's ROBLOX for gods sake, haha- but seriously we've made some cool shit.
+While this is less of a project and more of an entire collection of projects, I think it still deserves to be up here haha. All of these projects were done for my friends who have made a little group that we call the "GEE CEE." It's not like we're actually getting payed for anything we do, nor is any of this official- it's ROBLOX for gods sake (lol)- but seriously we've made some cool shit.
 
 <br> One of our first "official-ish" projects we've done is on a little project called "GEE CEE HUB." This is a small interface for running our custom scripts. To set the scene, ROBLOX had pretty much made it almost impossible to make scriptst that allowed your character to dance or have fun animations. But one of our friends in the group, Bug, created a game that showed every single official ROBLOX animation that you could use without ROBLOX stopping you.
 
-With this game that our friend made, we were able to create custom scriptst that replicated animation scripts of the past but using official animations. It was pretty janky but still cool, and with those scripts we created a little hub for it.
+With this game that our friend made, we were able to create custom scripts that replicated animation scripts of the past but using ROBLOX-published animations. It was pretty janky but still cool, and with those scripts we created a little hub for it.
 
 <br><img class="rounded-lg" alt="Studio" src="/assets/projects/GCH_S.png">
 
