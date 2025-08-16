@@ -29,6 +29,7 @@ layout: 'base.njk'
             flex-shrink: none;
             padding-left: 15vw;
             padding-right: 30vw;
+            margin-top: 10pt;
         }
     }
 
@@ -53,7 +54,7 @@ layout: 'base.njk'
 </style>
 
 <div class="article flex-col highlight grow overflow-y-scroll overflow-x-clip mt-1">
-    <div class="mt-6 images flex gap-0.5 grow w-parent">
+    <div class="images flex gap-0.5 grow w-parent">
         {% for image in images %}
             <div class="image flex flex-col relative container mb-1 w-full break-inside-avoid overflow-clip">
                 <!-- todo: later load small img before <div class="blur-load" style="background-image: url(); background-size: cover;
